@@ -41,19 +41,6 @@ function countDis(obj){
             $(this).parent().find('input[type=text]').val('');
         }
 
-       //设置默认经纬度
-        that.def = function (){
-            var arr1=[114,17,44];
-            var arr2=[30,34,56];
-            for (var i = 0; i < that.endLon.length; i++) {
-                that.endLon.eq(i).val(arr1[i]);
-            };
-            for (var i = 0; i < that.endLa.length; i++) {
-                that.endLa.eq(i).val(arr2[i]);
-            };
-        }
-
-
         //获得经纬度数值
         function getVal(m){
             var arr=[];
