@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<title>经纬度距离计算</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="根据两地经纬度算距离" />
+</head>
+<body>
+    <div>
+        两点空距计算结果
+        <input type="text" class="distance" size="10" value="">公里 <br><br>
+        起点经度 
+        <input type="text" class="startLongi" size="1" maxlength="3" value="">度 
+        <input type="text" class="startLongi" size="1" maxlength="3" value="">分 
+        <input type="text" class="startLongi" size="3" maxlength="6" value="">秒 <br>
+        起点纬度 
+        <input type="text" class="startLagi" size="1" maxlength="3" value="">度 
+        <input type="text" class="startLagi" size="1" maxlength="3" value="">分
+        <input type="text" class="startLagi" size="3" maxlength="6" value="">秒<br> 
+        终点经度 
+        <input type="text" class="endLongi" size="1" maxlength="3" value="">度
+        <input type="text" class="endLongi" size="1" maxlength="3" value="">分 
+        <input type="text" class="endLongi" size="3" maxlength="6" value="">秒<br> 
+        终点纬度 
+        <input type="text" class="endLagi" size="1" maxlength="3" value="">度 
+        <input type="text" class="endLagi" size="1" maxlength="3" value="">分 
+        <input type="text" class="endLagi" size="3" maxlength="6" value="">秒<br><br>
+        <input type="button" value="提交" class="yx_btn">
+        <input type="reset" value="清空" class="cClear">  
+        <input type="button" class="setDef" value="福齐俱乐部">
+    </div>
+</body>
+<script type="text/javascript" src="./js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="./js/count.js"></script>
+<script>
+    var countDis1 = new countDis({
+        startLon:'.startLongi',   //起点经度框
+        startLa:'.startLagi',    //起点纬度框
+        endLon:'.endLongi',   //终点经度框
+        endLa:'.endLagi',    //终点纬度框
+        distance:'.distance',   //计算结果框
+        subM:'.yx_btn',    //提交框
+        reset:'.cClear',  //重置框
+        defau:'.setDef'    //设置默认值框
+    });
+
+</script>
+</html>
